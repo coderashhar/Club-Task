@@ -1,0 +1,50 @@
+.imageCarousel{
+    width: 100%;
+    margin: 10rem auto;
+    margin-bottom: 5rem;
+    margin-top: 5rem;
+    height: 20%;
+}
+
+.slide img{
+    width: auto;
+    margin: 0 auto;
+}
+
+.slide{
+    transform: scale(0.4);
+    transition: transform 300ms;
+    opacity: 0.5;
+}
+
+.activeSlide{
+    transform: scale(1.1);
+    opacity: 1;
+}
+
+.arrow{
+    font-size: 1.5rem;
+    background-color: black;
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+    color:grey
+}
+
+.arrow svg{
+    transition: color 300ms;
+}
+
+.arrow svg:hover{
+    color:white
+}
+
+.next{
+    right: 0%;
+    top: 50%;
+}
+
+.prev{
+    left: 0%;
+    top: 50%;
+}

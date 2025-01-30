@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import "tailwindcss";
+
+:root{
+  font-family: "Poppins", sans-serif;
+  color-scheme: dark;
+}
+
+#button {
+  @apply transition-transform duration-300;
+}
+#button:hover {
+  @apply scale-110; 
+}
+
+#navbutton {
+  @apply transition-transform duration-300;
+}
+#navbutton:hover {
+  @apply scale-105 from-blue-600 to-indigo-800; 
+}
+
+#navlink {
+  @apply transition-transform duration-300;
+}
+#navlink:hover {
+  @apply scale-107 text-blue-400;
+}
