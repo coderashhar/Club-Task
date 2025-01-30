@@ -1,6 +1,6 @@
 # Mozilla Firefox Club : Upcoming Events
 
-This platform showcases the exciting events hosted by the Mozilla Firefox Club. It includes a dynamic timeline of upcoming events, highlights from past events, a sponsor section to recognize the amazing companies that support the community, and an interactive hero section with a unique mouse cursor animation.
+Homepage for the exciting upcoming events hosted by the Mozilla Firefox Club. It includes a dynamic timeline of upcoming events, highlights from past events, a sponsor section to recognize the amazing companies that support the community, and an interactive hero section with a unique mouse cursor animation.
 
 ## Features
 
