@@ -1,13 +1,13 @@
 export default function SponsorsSection() {
     const sponsors = [
-      { id: 1, name: "Frontify", logo: "public/svg/logo1.svg" },
-      { id: 2, name: "Swiggy", logo: "public/svg/logo8.svg" },
-      { id: 3, name: "highradius", logo: "public/svg/logo3.svg" },
-      { id: 4, name: "Multiplier", logo: "public/svg/logo4.svg" },
-      { id: 5, name: "NordVPN", logo: "public/svg/logo5.svg" },
-      { id: 6, name: "MongoDB", logo: "public/svg/logo6.svg" },
-      { id: 7, name: "Jotform", logo: "public/svg/logo7.svg" },
-      { id: 8, name: "GoodData", logo: "public/svg/logo2.svg" },
+      { id: 1, name: "Frontify", logo: "/svg/logo1.svg" },
+      { id: 2, name: "Swiggy", logo: "/svg/logo8.svg" },
+      { id: 3, name: "highradius", logo: "/svg/logo3.svg" },
+      { id: 4, name: "Multiplier", logo: "/svg/logo4.svg" },
+      { id: 5, name: "NordVPN", logo: "/svg/logo5.svg" },
+      { id: 6, name: "MongoDB", logo: "/svg/logo6.svg" },
+      { id: 7, name: "Jotform", logo: "/svg/logo7.svg" },
+      { id: 8, name: "GoodData", logo: "/svg/logo2.svg" },
     ];
   
     return (
@@ -24,11 +24,23 @@ export default function SponsorsSection() {
               key={sponsor.id}
               className="flex justify-center items-center p-4 bg-white rounded-lg shadow-md hover:shadow-lg transform transition duration-300 hover:scale-105 h-32" 
             >
-              <img
-                src={sponsor.logo}
-                alt={sponsor.name}
-                className="max-h-full object-contain"
-              />
+              {typeof sponsor.logo === "string" ? (
+  <img
+    src={sponsor.logo}
+    alt={sponsor.name}
+    className="max-h-full object-contain"
+  />
+) : (
+  <svg
+    className="max-h-full object-contain"
+    viewBox={sponsor.logo.viewBox}
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    {sponsor.logo.paths.map((path, index) => (
+      <path key={index} d={path} fill={path.fill || "currentColor"} />
+    ))}
+  </svg>
+)}
             </div>
           ))}
         </div>
