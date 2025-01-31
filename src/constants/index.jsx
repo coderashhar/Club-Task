@@ -20,10 +20,10 @@ export const events = [
 ];
 
 export const navItems = [
-  { label: "Home", href: "#home" },
-  { label: "Upcoming Events", href: "#upcoming-events" },
-  { label: "Sponsors ", href: "#sponsors" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "home", offset:-230 },
+  { label: "Upcoming Events", href: "upcoming-events", offset:-110 },
+  { label: "Highlights", href: "highlights", offset:-170 },
+  { label: "Sponsors ", href: "sponsors", offset:-80 },
 ];
 
 

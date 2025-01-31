@@ -2,6 +2,7 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/logo.svg";
 import { navItems } from "../constants";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -20,14 +21,20 @@ const Navbar = () => {
           <ul className="hidden lg:flex ml-14 space-x-12">
             {navItems.map((item, index) => (
               <li id="navlink" key={index}>
-                <a href={item.href}>{item.label}</a>
+                <Link to={item.href} smooth={true} duration={800} offset={item.offset}>{item.label}</Link>
               </li>
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-5 items-center">
-            <a href="#" id="navbutton" className="py-2 px-3 border rounded-md">
-              View Schedule
-            </a>
+            <Link 
+              to="upcoming-events"
+              smooth={true} 
+              duration={500}
+              offset={-110}
+              id="navbutton"
+              className="py-2 px-3 border rounded-md">
+                View Schedule
+            </Link>
             <a
               href="https://docs.google.com/forms/d/e/1FAIpQLSfPDU7xdWwZ4FowMcWQEWELt7TUkQmfCIS2koFG30AJS_RHNw/viewform?usp=header"
               id="navbutton"
@@ -52,9 +59,14 @@ const Navbar = () => {
               ))}
             </ul>
             <div className="flex space-x-6">
-              <a href="#" className="py-2 px-3 border rounded-md">
-              View Schedule
-              </a>
+              <Link 
+              to="upcoming-events"
+              smooth={true} 
+              duration={500}
+              offset={-110}
+              className="py-2 px-3 border rounded-md">
+                View Schedule
+            </Link>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSfPDU7xdWwZ4FowMcWQEWELt7TUkQmfCIS2koFG30AJS_RHNw/viewform?usp=header"
                 className="py-2 px-3 rounded-md bg-gradient-to-r from-blue-500 to-blue-700"

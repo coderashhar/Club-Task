@@ -11,10 +11,18 @@ export default function HomePage(){
         <>
         <Navbar/>
         <div className="max-w-7xl mx-auto pt-20 px-6">
-            <HeroSection/>
-            <Timeline events={events}/>
-            <PreviousEvents/>
-            <SponsorsSection/>
+            <section id="home" className="section" >
+                <HeroSection/>
+            </section>
+            <section id="upcoming-events" className="section">
+                <Timeline events={events}/>
+            </section>
+            <section id="highlights" className="section">
+                <PreviousEvents/>
+            </section>
+            <section id="sponsors" className="section">
+                <SponsorsSection/>
+            </section>
         </div>
         <Footer/>
         </>

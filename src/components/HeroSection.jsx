@@ -1,5 +1,5 @@
 import { BackgroundCircles } from "../design/Hero";
-import PreviousEvents from "./ImageCarousel";
+import { Link } from "react-scroll";
 
 const HeroSection = () => {
   return (
@@ -27,13 +27,15 @@ const HeroSection = () => {
         >
           Register Now
         </a>
-        <a
-          href="#"
+        <Link 
+          to="upcoming-events"
+          smooth={true} 
+          duration={500}
+          offset={-110}
           id="button"
-          className="py-3 px-4 mx-3 rounded-md border bg-black"
-        >
-          View Schedule
-        </a>
+          className="py-3 px-4 mx-3 rounded-md border bg-black">
+            View Schedule
+        </Link>
       </div>
     </div>
   );
