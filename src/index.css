@@ -5,6 +5,7 @@
 :root{
   font-family: "Poppins", sans-serif;
   color-scheme: dark;
+  cursor:pointer;
 }
 
 #button {
