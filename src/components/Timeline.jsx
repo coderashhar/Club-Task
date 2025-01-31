@@ -52,7 +52,7 @@ const Pillar = () => {
 }
 const EventCard = ({heading, subHeading, date}) => {
     return (
-    <div className='transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-2xl flex flex-col gap-y-2 border shadow-md shadow-blue-600 rounded-xl p-4 bg-blue-200 w-100 sm:w-80 md:w-96'>
+    <div className='transition duration-300 ease-in-out transform hover:-translate-y-1 hover:shadow-xl flex flex-col gap-y-2 border shadow-md shadow-blue-600 rounded-xl p-4 bg-blue-200 w-100 sm:w-80 md:w-96'>
         <div className=' text-blue-500 font-bold text-lg border-b'>{heading}</div>
         <div className="text-sm text-gray-800 my-0">{date}</div>
         <div className= 'text-sm text-gray-600'> {subHeading}</div>
